@@ -1,7 +1,0 @@
----
-- name: Install nginx dengan ansible
-  hosts: jenkins-slave
-  user: ubuntu
-  sudo: yes
-  roles:
-    - nginx

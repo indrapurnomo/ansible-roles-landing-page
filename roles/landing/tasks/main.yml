@@ -1,0 +1,16 @@
+- name: install nginx
+  apt:
+    name: nginx
+    state: present
+- name: copy config
+  template:
+    src: landing.conf
+    dest: /etc/nginx/sites-enabled/
+- name: Copy landing-page
+  synchronize:
+    src=/root/landing-ansible/roles/landing/templates/landing-page/
+    dest=/var/www/html/landing-page/
+- name: start nginx
+  service:
+    name: nginx
+    state: started
