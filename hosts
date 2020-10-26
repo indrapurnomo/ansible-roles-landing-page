@@ -1,4 +1,7 @@
 
 
-[server-landing]
-18.224.67.23
+#[server-landing]
+#18.224.67.23
+
+[server]
+18.191.210.140

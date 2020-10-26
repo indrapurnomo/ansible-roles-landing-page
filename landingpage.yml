@@ -1,6 +1,7 @@
 ---
 - name: Install nginx landingpage dengan ansible
-  hosts: server-landing
+ # hosts: server-landing
+  hosts: server
   user: root
   sudo: yes
   roles:
