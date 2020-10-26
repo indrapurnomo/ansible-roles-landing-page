@@ -2,6 +2,10 @@
   apt:
     name: nginx
     state: present
+- name: delete default nginx
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
 - name: copy config
   template:
     src: landing.conf
@@ -14,3 +18,5 @@
   service:
     name: nginx
     state: started
+  notify:
+  - restart nginx
